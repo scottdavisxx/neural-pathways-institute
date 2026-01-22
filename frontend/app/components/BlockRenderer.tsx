@@ -1,9 +1,8 @@
 import React from 'react'
-
-import Cta from '@/app/components/Cta'
-import Info from '@/app/components/InfoSection'
-import {dataAttr} from '@/sanity/lib/utils'
-import {PageBuilderSection} from '@/sanity/lib/types'
+import Hero from '@/app/components/HeroBanner'
+import { dataAttr } from '@/sanity/lib/utils'
+import { PageBuilderSection } from '@/sanity/lib/types'
+import Navigation from './Navigation'
 
 type BlockProps = {
   index: number
@@ -17,14 +16,14 @@ type BlocksType = {
 }
 
 const Blocks = {
-  callToAction: Cta,
-  infoSection: Info,
+  heroBanner: Hero,
+  navigation: Navigation,
 } as BlocksType
 
 /**
  * Used by the <PageBuilder>, this component renders a the component that matches the block type.
  */
-export default function BlockRenderer({block, index, pageId, pageType}: BlockProps) {
+export default function BlockRenderer({ block, index, pageId, pageType }: BlockProps) {
   // Block does exist
   if (typeof Blocks[block._type] !== 'undefined') {
     return (
@@ -53,6 +52,6 @@ export default function BlockRenderer({block, index, pageId, pageType}: BlockPro
         A &ldquo;{block._type}&rdquo; block hasn&apos;t been created
       </div>
     ),
-    {key: block._key},
+    { key: block._key },
   )
 }

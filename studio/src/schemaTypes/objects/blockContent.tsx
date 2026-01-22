@@ -1,5 +1,4 @@
 import {defineArrayMember, defineType, defineField} from 'sanity'
-import type {Link} from '../../../sanity.types'
 
 /**
  * This is the schema definition for the rich text fields used for
@@ -47,9 +46,8 @@ export const blockContent = defineType({
                 type: 'url',
                 hidden: ({parent}) => parent?.linkType !== 'href' && parent?.linkType != null,
                 validation: (Rule) =>
-                  Rule.custom((value, context) => {
-                    const parent = context.parent as Link
-                    if (parent?.linkType === 'href' && !value) {
+                  Rule.custom((value, context: any) => {
+                    if (context.parent?.linkType === 'href' && !value) {
                       return 'URL is required when Link Type is URL'
                     }
                     return true
@@ -62,9 +60,8 @@ export const blockContent = defineType({
                 to: [{type: 'page'}],
                 hidden: ({parent}) => parent?.linkType !== 'page',
                 validation: (Rule) =>
-                  Rule.custom((value, context) => {
-                    const parent = context.parent as Link
-                    if (parent?.linkType === 'page' && !value) {
+                  Rule.custom((value, context: any) => {
+                    if (context.parent?.linkType === 'page' && !value) {
                       return 'Page reference is required when Link Type is Page'
                     }
                     return true
@@ -77,9 +74,8 @@ export const blockContent = defineType({
                 to: [{type: 'post'}],
                 hidden: ({parent}) => parent?.linkType !== 'post',
                 validation: (Rule) =>
-                  Rule.custom((value, context) => {
-                    const parent = context.parent as Link
-                    if (parent?.linkType === 'post' && !value) {
+                  Rule.custom((value, context: any) => {
+                    if (context.parent?.linkType === 'post' && !value) {
                       return 'Post reference is required when Link Type is Post'
                     }
                     return true
