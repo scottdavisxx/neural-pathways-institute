@@ -1,4 +1,5 @@
 import HeroBanner from "./components/HeroBanner";
+import Navigation from "./components/Navigation";
 
 export default async function Page() {
 
@@ -19,12 +20,13 @@ export default async function Page() {
         buttonColor: "brand-teal"
       },
     ],
-    image: "/images/hero-banner.jpg",
+    image: "/fpo-hero-banner.png",
     altText: "Hero Banner Image",
   }
 
   return (
     <>
+      <Navigation />
       <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} altText={heroBanner.altText} />
     </>
   )

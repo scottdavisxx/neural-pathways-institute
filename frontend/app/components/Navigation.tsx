@@ -1,27 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
-import OrlsLogo, { LogoColor } from "./icons/orls-logo";
-import { Navigation } from "@/sanity.types";
+import Cta from "./Cta";
 
-interface NavigationProps {
-  block: Navigation;
-  color?: LogoColor;
-}
-export default function Navigation({
-  block
-}: NavigationProps) {
+export default function Navigation() {
   return (
     <nav
-      className={`flex justify-between items-center mt-8 mx-11 uppercase fixed top-0 left-0 right-0 z-50 font-bold ${block?.color === LogoColor.light ? "text-white" : "text-dark-blue"}`}
+      className="flex justify-between items-center text-white mt-8 mx-11 uppercase fixed top-0 left-0 right-0 z-50 font-bold"
     >
       <Link href="/">
-        <OrlsLogo color={block?.color && block.color === 'white' ? LogoColor.light : LogoColor.dark} />
+        <Image src="/npi-logo.png" alt="NPI Logo" width={100} height={100} />
       </Link>
-      <Link href="/admissions">Admissions</Link>
-      <Link href="/about">About ORLS</Link>
-      <Link href="/academics">Academics</Link>
-      <Link href="/student-life">Student Life</Link>
-      <Link href="/support">Support ORLS</Link>
-      <Link href="/alumni">Alumni</Link>
+      <Link href="/admissions">About</Link>
+      <Link href="/about">Patients</Link>
+      <Link href="/academics">Practitioners</Link>
+      <Cta href="/" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
     </nav>
   );
 }

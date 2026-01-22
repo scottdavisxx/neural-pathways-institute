@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@source inline("{hover:,}bg-brand-{teal,blue}");
+@source inline("{hover:,}bg-brand-{teal,blue,yellow}");
 
 @plugin "@tailwindcss/typography";
 
@@ -27,4 +27,5 @@
   --font-sans: var(--font-host-grotesk);
   --color-brand-blue: #132960;
   --color-brand-teal: #00CDCE;
+  --color-brand-yellow: #FBB74A;
 }
