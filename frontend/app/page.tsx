@@ -1,18 +1,10 @@
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { PortableText } from '@portabletext/react'
-
-import { AllPosts } from '@/app/components/Posts'
-import { settingsQuery } from '@/sanity/lib/queries'
-import { sanityFetch } from '@/sanity/lib/live'
-import { dataAttr } from '@/sanity/lib/utils'
+import HeroBanner from "./components/HeroBanner";
 
 export default async function Page() {
-  const { data: settings } = await sanityFetch({
-    query: settingsQuery,
-  })
 
   return (
-    <h1 className='text-center text-4xl font-bold mt-24'>Index Page</h1>
+    <>
+      <HeroBanner />
+    </>
   )
 }
