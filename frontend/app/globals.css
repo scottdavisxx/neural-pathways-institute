@@ -24,7 +24,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-sans: var(--font-albert-sans);
+  --font-sans: var(--font-host-grotesk);
   --color-brand-blue: #132960;
   --color-brand-teal: #00CDCE;
 }
