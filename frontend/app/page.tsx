@@ -2,9 +2,30 @@ import HeroBanner from "./components/HeroBanner";
 
 export default async function Page() {
 
+  const heroBanner = {
+    title: "Reconnecting the Body. Rewriting What's Possible.",
+    subtitle: "Neuro-driven healing for patients and practitioners ready for real results.",
+    cta: [
+      {
+        href: "/",
+        buttonText: "Book an Appointment",
+        newTab: false,
+        buttonColor: "brand-teal"
+      },
+      {
+        href: "/",
+        buttonText: "Learn More",
+        newTab: false,
+        buttonColor: "brand-teal"
+      },
+    ],
+    image: "/images/hero-banner.jpg",
+    altText: "Hero Banner Image",
+  }
+
   return (
     <>
-      <HeroBanner />
+      <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} altText={heroBanner.altText} />
     </>
   )
 }

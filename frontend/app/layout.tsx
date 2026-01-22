@@ -2,7 +2,8 @@ import './globals.css'
 // import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 // import { Inter, IBM_Plex_Mono } from 'next/font/google'
-import { Albert_Sans } from "next/font/google";
+// import { Albert_Sans } from "next/font/google";
+import { Host_Grotesk } from "next/font/google";
 import { draftMode } from 'next/headers'
 import { toPlainText } from 'next-sanity'
 import { VisualEditing } from 'next-sanity/visual-editing'
@@ -49,21 +50,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-// const inter = Inter({
-//   variable: '--font-inter',
-//   subsets: ['latin'],
-//   display: 'swap',
-// })
-
-// const ibmPlexMono = IBM_Plex_Mono({
-//   variable: '--font-ibm-plex-mono',
-//   weight: ['400'],
-//   subsets: ['latin'],
-//   display: 'swap',
-// })
-
-const albertSans = Albert_Sans({
-  variable: "--font-albert-sans",
+const hostGrotesk = Host_Grotesk({
+  variable: "--font-host-grotesk",
   subsets: ["latin"],
 });
 
@@ -72,7 +60,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang="en">
-      <body className={albertSans.variable}  >
+      <body className={hostGrotesk.variable}  >
         <section className="min-h-screen">
           {/* The <Toaster> component is responsible for rendering toast notifications used in /app/client-utils.ts and /app/components/DraftModeToast.tsx */}
           <Toaster />

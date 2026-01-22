@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@source inline("{hover:,}bg-brand-{teal,blue}");
+
 @plugin "@tailwindcss/typography";
 
 @layer base {
@@ -18,11 +20,11 @@
   padding: 0 2rem;
 }
 
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --font-sans: var(--font-albert-sans);
-  --color-dark-blue: #242d65;
-  --color-medium-blue: #355BA5;
-  --color-light-blue: #E3E8F2;
+  --color-brand-blue: #132960;
+  --color-brand-teal: #00CDCE;
 }
