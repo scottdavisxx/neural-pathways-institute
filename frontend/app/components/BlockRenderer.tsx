@@ -16,8 +16,8 @@ type BlocksType = {
 }
 
 const Blocks = {
-  heroBanner: Hero,
-  navigation: Navigation,
+  // heroBanner: Hero,
+  // navigation: Navigation,
 } as BlocksType
 
 /**

@@ -8,8 +8,8 @@ import {blockContent} from './objects/blockContent'
 import button from './objects/button'
 import {blockContentTextOnly} from './objects/blockContentTextOnly'
 // Added by Scott, everything above is from the template
-import { heroBanner } from './objects/heroBanner'
-import { navigation } from './objects/navigation'
+// import { heroBanner } from './objects/heroBanner'
+// import { navigation } from './objects/navigation'
 
 // Export an array of all the schema types.  This is used in the Sanity Studio configuration. https://www.sanity.io/docs/studio/schema-types
 
@@ -25,7 +25,7 @@ export const schemaTypes = [
   blockContent,
   blockContentTextOnly,
   infoSection,
-  heroBanner,
+  // heroBanner,
+  // navigation,
   link,
-  navigation,
 ]
