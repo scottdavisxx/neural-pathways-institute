@@ -13,37 +13,6 @@
  */
 
 // Source: ../sanity.schema.json
-export type Cta = {
-  href: string
-  buttonText: string
-  newTab?: boolean
-}
-
-export type ImageAndAltText = {
-  image?: ImageAndAltTextImage
-  altText?: string
-}
-
-export type SanityImageAssetReference = {
-  _ref: string
-  _type: 'reference'
-  _weak?: boolean
-  [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
-}
-
-export type ImageAndAltTextImage = {
-  asset?: SanityImageAssetReference
-  media?: unknown // Unable to locate the referenced type "image.media" in schema
-  hotspot?: SanityImageHotspot
-  crop?: SanityImageCrop
-  _type: 'image'
-}
-
-export type Navigation = {
-  _type: 'navigation'
-  color?: 'white' | 'dark-blue'
-}
-
 export type PageReference = {
   _ref: string
   _type: 'reference'
@@ -67,19 +36,18 @@ export type Link = {
   openInNewTab?: boolean
 }
 
-export type HeroBanner = {
-  _type: 'heroBanner'
-  titleOne: string
-  titleTwo?: string
-  cta?: Cta
-  imageAndAltText?: ImageAndAltText
-}
-
 export type InfoSection = {
   _type: 'infoSection'
   heading?: string
   subheading?: string
   content?: BlockContent
+}
+
+export type SanityImageAssetReference = {
+  _ref: string
+  _type: 'reference'
+  _weak?: boolean
+  [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
 }
 
 export type BlockContent = Array<
@@ -257,14 +225,7 @@ export type Page = {
   _rev: string
   name: string
   slug: Slug
-  pageBuilder?: Array<
-    | ({
-        _key: string
-      } & HeroBanner)
-    | ({
-        _key: string
-      } & Navigation)
-  >
+  pageBuilder?: null
 }
 
 export type SanityAssistInstructionTask = {
@@ -501,16 +462,11 @@ export type Geopoint = {
 }
 
 export type AllSanitySchemaTypes =
-  | Cta
-  | ImageAndAltText
-  | SanityImageAssetReference
-  | ImageAndAltTextImage
-  | Navigation
   | PageReference
   | PostReference
   | Link
-  | HeroBanner
   | InfoSection
+  | SanityImageAssetReference
   | BlockContent
   | BlockContentTextOnly
   | Button
@@ -599,21 +555,7 @@ export type GetPageQueryResult = {
   slug: Slug
   heading: null
   subheading: null
-  pageBuilder: Array<
-    | {
-        _key: string
-        _type: 'heroBanner'
-        titleOne: string
-        titleTwo?: string
-        cta?: Cta
-        imageAndAltText?: ImageAndAltText
-      }
-    | {
-        _key: string
-        _type: 'navigation'
-        color?: 'dark-blue' | 'white'
-      }
-  > | null
+  pageBuilder: null
 } | null
 
 // Source: sanity/lib/queries.ts

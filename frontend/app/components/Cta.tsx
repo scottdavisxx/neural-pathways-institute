@@ -12,7 +12,7 @@ export default function Cta({ href, buttonText, newTab, buttonColor = "brand-tea
 
   const buttonColorClass = `bg-${buttonColor}`;
   return (
-    <Link target={newTab ? "_blank" : "_self"} href={href} className={`text-black text-xl px-4 py-2 rounded-sm uppercase ${buttonColorClass}`}>
+    <Link target={newTab ? "_blank" : "_self"} href={href} className={`text-black text-xl text-center px-4 py-2 rounded-sm uppercase w-1/2 ${buttonColorClass}`}>
       {buttonText}
     </Link>
   );

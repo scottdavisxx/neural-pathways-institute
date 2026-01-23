@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 // import { Inter, IBM_Plex_Mono } from 'next/font/google'
 // import { Albert_Sans } from "next/font/google";
 import { Host_Grotesk } from "next/font/google";
+import localFont from 'next/font/local'
 import { draftMode } from 'next/headers'
 import { toPlainText } from 'next-sanity'
 import { VisualEditing } from 'next-sanity/visual-editing'
@@ -55,12 +56,69 @@ const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
 });
 
+const satoshi = localFont({
+  src: [
+    {
+      path: './fonts/Satoshi-Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-LightItalic.otf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Satoshi-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Satoshi-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-MediumItalic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Satoshi-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-BoldItalic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Satoshi-Black.otf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-BlackItalic.otf',
+      weight: '900',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-satoshi',
+  display: 'swap',
+});
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled: isDraftMode } = await draftMode()
 
   return (
     <html lang="en">
-      <body className={`${hostGrotesk.variable} font-sans`}  >
+      <body className={`${hostGrotesk.variable} ${satoshi.variable} font-sans`}>
         <section className="min-h-screen">
           {/* The <Toaster> component is responsible for rendering toast notifications used in /app/client-utils.ts and /app/components/DraftModeToast.tsx */}
           <Toaster />

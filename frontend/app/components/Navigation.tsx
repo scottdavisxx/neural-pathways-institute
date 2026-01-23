@@ -10,10 +10,12 @@ export default function Navigation() {
       <Link href="/">
         <Image src="/npi-logo.png" alt="NPI Logo" width={100} height={100} />
       </Link>
-      <Link href="/admissions">About</Link>
-      <Link href="/about">Patients</Link>
-      <Link href="/academics">Practitioners</Link>
-      <Cta href="/" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
+      <div className="flex justify-center items-center gap-28">
+        <Link href="/admissions">About</Link>
+        <Link href="/about">Patients</Link>
+        <Link href="/academics">Practitioners</Link>
+        <Cta href="/" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
+      </div>
     </nav>
   );
 }

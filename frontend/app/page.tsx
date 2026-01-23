@@ -15,7 +15,7 @@ export default async function Page() {
       },
       {
         href: "/",
-        buttonText: "Learn More",
+        buttonText: "Become a Practitioner",
         newTab: false,
         buttonColor: "brand-teal"
       },
