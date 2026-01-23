@@ -8,7 +8,7 @@ export default function Navigation() {
       className="flex justify-between items-center text-white mt-8 mx-11 uppercase fixed top-0 left-0 right-0 z-50 font-bold"
     >
       <Link href="/">
-        <Image src="/npi-logo.png" alt="NPI Logo" width={100} height={100} />
+        <Image src="/npi-logo.png" alt="NPI Logo" width={186} height={55} />
       </Link>
       <div className="flex justify-center items-center gap-28">
         <Link href="/admissions">About</Link>

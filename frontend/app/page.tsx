@@ -1,5 +1,6 @@
 import HeroBanner from "./components/HeroBanner";
 import Navigation from "./components/Navigation";
+import SideImageWithCta from "./components/SideImageWithCta";
 
 export default async function Page() {
 
@@ -24,10 +25,16 @@ export default async function Page() {
     altText: "Hero Banner Image",
   }
 
+  const sideImageWithCta = {
+    image: "/fpo-side-image-with-cta.jpg",
+    altText: "Side Image With CTA",
+  }
+
   return (
     <>
       <Navigation />
       <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} altText={heroBanner.altText} />
+      <SideImageWithCta image={sideImageWithCta.image} altText={sideImageWithCta.altText} />
     </>
   )
 }
