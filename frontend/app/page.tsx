@@ -26,6 +26,7 @@ export default async function Page() {
       },
     ],
     image: "/fpo-hero-banner.png",
+    bgImage: "/fpo-hero-banner-bg-1.png",
     altText: "Hero Banner Image",
   }
 
@@ -36,7 +37,7 @@ export default async function Page() {
 
   return (
     <>
-      <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} altText={heroBanner.altText} />
+      <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} bgImage={heroBanner.bgImage} image={heroBanner.image} altText={heroBanner.altText} />
       <SideImageWithCta image={sideImageWithCta.image} altText={sideImageWithCta.altText} />
       <TwoCtasWithIntro />
       <TwoColCardsWithCta />

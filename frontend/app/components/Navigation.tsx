@@ -11,9 +11,9 @@ export default function Navigation() {
         <Image src="/npi-logo.png" alt="NPI Logo" width={186} height={55} />
       </Link>
       <div className="flex justify-center items-center gap-28">
-        <Link href="/admissions">About</Link>
-        <Link href="/about">Patients</Link>
-        <Link href="/academics">Practitioners</Link>
+        <Link href="/about">About</Link>
+        <Link href="/patients">Patients</Link>
+        <Link href="/practitioners">Practitioners</Link>
         <Cta href="/" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
       </div>
     </nav>
