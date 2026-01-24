@@ -5,7 +5,7 @@ import Cta from "./Cta";
 export default function Navigation() {
   return (
     <nav
-      className="flex justify-between items-center text-white mt-8 mx-11 uppercase fixed top-0 left-0 right-0 z-50 font-bold"
+      className="flex justify-between items-center text-white px-11 py-4 uppercase fixed top-0 left-0 right-0 z-50 font-bold bg-brand-blue"
     >
       <Link href="/">
         <Image src="/npi-logo.png" alt="NPI Logo" width={186} height={55} />

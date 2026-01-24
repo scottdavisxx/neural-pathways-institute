@@ -36,7 +36,6 @@ export default async function Page() {
 
   return (
     <>
-      <Navigation />
       <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} altText={heroBanner.altText} />
       <SideImageWithCta image={sideImageWithCta.image} altText={sideImageWithCta.altText} />
       <TwoCtasWithIntro />
