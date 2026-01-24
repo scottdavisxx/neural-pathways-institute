@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Badge from "./Badge";
 import Cta from "./Cta";
 
 export default function TwoCtasWithIntro() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center px-64 py-16 bg-brand-light-blue text-brand-blue text-center">
+    <div className="flex flex-col gap-8 items-center justify-center px-64 py-16 bg-brand-light-blue text-brand-blue text-center relative overflow-visible">
+      <Image src="/accent.png" alt="Accent" width={250} height={1000} className="absolute left-0 z-10" />
       <Badge text="Why it works" textColor="dark-blue" bgColor="transparent" />
       <h2 className="text-6xl font-semibold leading-snug">
         Because the Problem Isn&apos;t the Muscle; It&apos;s the Signal.
