@@ -1,16 +1,18 @@
+import Badge from "./Badge";
 import Cta from "./Cta";
 
 export default function TwoCtasWithIntro() {
   return (
-    <div>
-      <h2>
+    <div className="flex flex-col gap-8 items-center justify-center px-64 py-16 bg-brand-light-blue text-brand-blue text-center">
+      <Badge text="Why it works" textColor="dark-blue" bgColor="transparent" />
+      <h2 className="text-6xl font-semibold leading-snug">
         Because the Problem Isn&apos;t the Muscle; It&apos;s the Signal.
       </h2>
       {/* Consider Rich Text/WYSIWYG editor for this */}
       <p>
         Most practices focus on what they can see: tight muscles,
         inflamed tissues, misalignments, and pain points. NPI goes
-        to the one place they overlook; the neurological source controlling it all.
+        to the one place they overlook; the neurological source controlling it all...
       </p>
       <p>
         Our technique doesn&apos;t chase symptoms or offer temporary relief.
@@ -18,7 +20,7 @@ export default function TwoCtasWithIntro() {
         and function. NPI fixes the communication breakdown, not just the
         discomfort it creates.
       </p>
-      <div>
+      <div className="flex gap-8">
         <Cta href="/" buttonText="Book an Appointment" newTab={false} buttonColor="brand-yellow" />
         <Cta href="/" buttonText="Become a Practitioner" newTab={false} buttonColor="brand-yellow" />
       </div>
