@@ -1,3 +1,4 @@
+import FullWidthVideo from "../components/FullWidthVideo";
 import HeroBanner from "../components/HeroBanner";
 
 const heroBanner = {
@@ -22,10 +23,27 @@ const heroBanner = {
   altText: "Hero Banner Image",
 }
 
+const FullWidthVideoBlurb = `Developed at Utah's Neural Pathway Institute by Dr. Eric Rawlin, 
+  our innovative method is built on one simple truth: every function in the 
+  body begins with communication from the brain. When that communication breaks 
+  down, so does your health. \n\n That's why NPI uses a non-invasive neurological 
+  technique to restore the pathways that control movement, sensation, healing, 
+  and overall function, helping people of every age find relieve, resolve 
+  unexplained symptoms, and finally feel like themselves again.`
+
 export default function About() {
   return (
     <>
       <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} bgImage={heroBanner.bgImage} altText={heroBanner.altText} />
+      <FullWidthVideo
+        badgeText="About NPI"
+        badgeTextColor="dark-blue"
+        badgeBgColor="transparent"
+        title="Proof that Healing is Possible"
+        videoImage="/fpo-video-1.jpg"
+        videoAltText="Full Width Video"
+        blurb={FullWidthVideoBlurb}
+      />
     </>
   )
 }

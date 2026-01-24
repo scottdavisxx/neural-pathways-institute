@@ -41,7 +41,7 @@ export default async function Page() {
       <SideImageWithCta image={sideImageWithCta.image} altText={sideImageWithCta.altText} />
       <TwoCtasWithIntro />
       <TwoColCardsWithCta />
-      <FullWidthVideo />
+      <FullWidthVideo badgeText="Patient Results" badgeTextColor="dark-blue" badgeBgColor="transparent" title="Proof that Healing is Possible" videoImage="/fpo-video-1.jpg" videoAltText="Full Width Video" />
       <ThreeColSliderWithCta />
     </>
   )
