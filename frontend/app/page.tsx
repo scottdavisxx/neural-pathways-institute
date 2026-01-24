@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import SideImageWithCta from "./components/SideImageWithCta";
 import TwoColCardsWithCta from "./components/TwoColCardsWithCta";
 import TwoCtasWithIntro from "./components/TwoCtasWithIntro";
+import FullWidthVideo from "./components/FullWidthVideo";
 
 export default async function Page() {
 
@@ -39,6 +40,7 @@ export default async function Page() {
       <SideImageWithCta image={sideImageWithCta.image} altText={sideImageWithCta.altText} />
       <TwoCtasWithIntro />
       <TwoColCardsWithCta />
+      <FullWidthVideo />
     </>
   )
 }
