@@ -18,7 +18,7 @@ export default function FullWidthVideo({ badgeText, badgeTextColor, badgeBgColor
       <h2 className="text-6xl font-semibold leading-snug text-brand-blue">{title}</h2>
       <Image className="rounded-4xl" src={videoImage} alt={videoAltText} width={1205} height={630} />
       {blurb && (
-        <p className="text-center font-light whitespace-pre-line">{blurb}</p>
+        <p className="w-11/12 text-center font-light whitespace-pre-line">{blurb}</p>
       )}
     </div>
   )
