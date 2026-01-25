@@ -40,7 +40,7 @@ function RenderSections({
         path: `pageBuilder`,
       }).toString()}
     >
-      {pageBuilderSections.map((block: PageBuilderSection, index: number) => (
+      {/* {pageBuilderSections.map((block: PageBuilderSection, index: number) => (
         <BlockRenderer
           key={block._key}
           index={index}
@@ -48,7 +48,7 @@ function RenderSections({
           pageId={page._id}
           pageType={page._type}
         />
-      ))}
+      ))} */}
     </div>
   )
 }
