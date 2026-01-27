@@ -1,3 +1,4 @@
+import CardGrid from "../components/CardGrid";
 import FullWidthVideo from "../components/FullWidthVideo";
 import HeroBanner from "../components/HeroBanner";
 import ThreeColCards from "../components/ThreeColCards";
@@ -44,6 +45,7 @@ export default function About() {
       <TwoColCtaWithImage />
       <ThreeColCards />
       <TwoColCardsWithCta />
+      <CardGrid />
     </>
   )
 }
