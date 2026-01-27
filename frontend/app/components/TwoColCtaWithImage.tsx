@@ -1,28 +1,75 @@
 import Image from "next/image";
 import Badge from "./Badge";
 import Cta from "./Cta";
+import { BadgeProps } from "./Badge";
+import { CtaProps } from "./Cta";
 
-export default function TwoColCtaWithImage() {
+interface TwoColCtaWithImageProps {
+  image: string;
+  accentImage?: string;
+  altText: string;
+  badgeText: string;
+  title: string;
+  blurb: string;
+  textColor?: string;
+  ctaProps?: CtaProps;
+  badgeProps?: BadgeProps;
+  imageOverflow?: boolean
+  imageSide?: "left" | "right";
+  cardBackgroundColor?: string;
+}
+
+export default function TwoColCtaWithImage({ image, accentImage, altText, badgeText, title, blurb, ctaProps, badgeProps, imageOverflow, textColor = "white", imageSide, cardBackgroundColor = "light-gray" }: TwoColCtaWithImageProps) {
+
+  const cardBackgroundColorVariants: Record<string, string> = {
+    "brand-dark-teal": "bg-brand-dark-teal",
+    "brand-light-blue": "bg-brand-light-blue",
+    "baby-blue": "bg-baby-blue",
+    "brand-yellow": "bg-brand-yellow",
+    "light-gray": "bg-light-gray",
+  };
+
+  const textColorVariants: Record<string, string> = {
+    "brand-dark-teal": "text-brand-dark-teal",
+    "brand-light-blue": "text-brand-light-blue",
+    "baby-blue": "text-baby-blue",
+    "brand-yellow": "text-brand-yellow",
+    "light-gray": "text-light-gray",
+    "white": "text-white",
+    "black": "text-black",
+  };
+
   return (
-    <div className="bg-light-gray text-white px-10 py-10 relative h-[750px]">
-      <Image src="/two-col-cta-accent.png" alt="Two Col CTA With Image" width={250} height={250} className="absolute -left-10 -top-10 z-10" />
-      <div className="flex flex-col gap-8 items-start justify-center px-10 py-10 bg-brand-dark-teal rounded-2xl relative h-[95%]">
+    <div className={`flex items-center px-16 py-16 relative ${cardBackgroundColorVariants[cardBackgroundColor]}`}>
+      {accentImage && (
+        <Image src={accentImage} alt="Two Col CTA With Image" width={250} height={250} className="absolute -left-10 -top-10 z-10" />
+      )}
+      {imageSide === "left" && (
         <Image
-          src="/fpo-two-col-cta.jpg"
-          alt="Two Col CTA With Image"
+          src={image}
+          alt={altText}
           width={598} height={709}
-          className="absolute right-0 rounded-2xl" />
-        <div className="w-6/12">
+          className="rounded-2xl"
+        />
+      )}
+      <div className={`flex flex-col gap-8 items-center justify-center px-10 py-20 bg-brand-dark-teal rounded-l-2xl relative h-[650px] ${textColorVariants[textColor]}`}>
+        <div className="">
           <Badge text="For Practitioners" textColor="white" bgColor="transparent" />
-          <h2 className="text-6xl font-semibold leading-snug">The Future of Clinical Practice</h2>
-          <p className="font-satoshi mb-8">NPI isn&apos;t only transforming the lives of patients;
-            reshaping the future of practitioners. Instead of memorizing protocols that crumble
-            in real-world practice, clinicians learn a mastery-level skill that elevates their
-            confidence, strengthens their reputation, and grows their practice through undeniable
-            patient success.</p>
-          <Cta href="#" buttonText="Start Your Journey" newTab={false} buttonColor="brand-yellow" textColor="black" />
+          <h2 className="text-6xl font-semibold leading-snug">{title}</h2>
+          <p className="font-satoshi mb-8">{blurb}</p>
+          {ctaProps && (
+            <Cta href={ctaProps.href} buttonText={ctaProps.buttonText} newTab={ctaProps.newTab} buttonColor={ctaProps.buttonColor} textColor={ctaProps.textColor} />
+          )}
         </div>
       </div>
+      {imageSide === "right" && (
+        <Image
+          src={image}
+          alt={altText}
+          width={598} height={709}
+          className="rounded-2xl"
+        />
+      )}
     </div>
   )
 }

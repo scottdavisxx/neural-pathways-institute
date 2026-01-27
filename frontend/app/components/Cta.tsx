@@ -10,7 +10,7 @@ export interface CtaProps {
   fill?: boolean;
 }
 
-export default function Cta({ href, buttonText, newTab, buttonColor = "brand-teal", textColor = "brand-blue", fill = false }: CtaProps) {
+export default function Cta({ href, buttonText = "Learn More", newTab, buttonColor = "brand-teal", textColor = "brand-blue", fill = false }: CtaProps) {
   const colorVariants: Record<string, string> = {
     "brand-teal": "bg-brand-teal",
     "brand-blue": "bg-brand-blue",

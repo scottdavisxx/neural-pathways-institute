@@ -1,4 +1,4 @@
-interface BadgeProps {
+export interface BadgeProps {
   text: string;
   textColor: string;
   bgColor: string;
