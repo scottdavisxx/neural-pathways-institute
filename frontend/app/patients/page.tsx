@@ -11,7 +11,7 @@ const heroBanner = {
       buttonColor: "brand-yellow"
     },
   ],
-  image: "/fpo-hero-banner-2.png",
+  image: "/hero-banner-patients-fpo.png",
   bgImage: "/fpo-hero-banner-bg-2.png",
   altText: "Hero Banner Image",
 }
