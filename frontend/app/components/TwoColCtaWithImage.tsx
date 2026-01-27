@@ -6,7 +6,8 @@ import { CtaProps } from "./Cta";
 
 interface TwoColCtaWithImageProps {
   image: string;
-  accentImage?: string;
+  accentImageLeft?: string;
+  accentImageRight?: string;
   altText: string;
   badgeText: string;
   title: string;
@@ -19,7 +20,20 @@ interface TwoColCtaWithImageProps {
   cardBackgroundColor?: string;
 }
 
-export default function TwoColCtaWithImage({ image, accentImage, altText, title, blurb, ctaProps, badgeProps, imageOverflow = false, textColor = "white", imageSide = "right", cardBackgroundColor = "light-gray" }: TwoColCtaWithImageProps) {
+export default function TwoColCtaWithImage({
+  image,
+  accentImageLeft,
+  accentImageRight,
+  altText,
+  title,
+  blurb,
+  ctaProps,
+  badgeProps,
+  imageOverflow = false,
+  textColor = "white",
+  imageSide = "right",
+  cardBackgroundColor = "light-gray"
+}: TwoColCtaWithImageProps) {
 
   const cardBackgroundColorVariants: Record<string, string> = {
     "brand-dark-teal": "bg-brand-dark-teal",
@@ -28,6 +42,7 @@ export default function TwoColCtaWithImage({ image, accentImage, altText, title,
     "brand-yellow": "bg-brand-yellow",
     "light-gray": "bg-light-gray",
     "brand-beige": "bg-brand-beige",
+    "brand-teal": "bg-brand-teal",
   };
 
   const textColorVariants: Record<string, string> = {
@@ -49,13 +64,16 @@ export default function TwoColCtaWithImage({ image, accentImage, altText, title,
 
   const imageOverflowVariants: Record<string, string> = {
     true: "h-[650px]",
-    false: "h-[709px]",
+    false: "h-[709px] -ml-3",
   };
 
   return (
     <div className={`flex items-center px-16 py-16 relative bg-light-gray`}>
-      {accentImage && (
-        <Image src={accentImage} alt="Two Col CTA With Image" width={250} height={250} className="absolute -left-10 -top-10 z-10" />
+      {accentImageLeft && (
+        <Image src={accentImageLeft} alt="Accent Image" width={250} height={250} className="absolute -left-10 -top-10 z-10" />
+      )}
+      {accentImageRight && (
+        <Image src={accentImageRight} alt="Accent Image" width={250} height={250} className="absolute -right-10 -top-10 z-10" />
       )}
       {imageSide === "left" && (
         <Image
@@ -66,7 +84,7 @@ export default function TwoColCtaWithImage({ image, accentImage, altText, title,
         />
       )}
       <div className={`flex flex-col gap-8 items-center justify-center px-16 py-20 relative ${imageOverflowVariants[imageOverflow.toString()]} ${imageSideBorders[imageSide]} ${cardBackgroundColorVariants[cardBackgroundColor]}`}>
-        <div className={textColorVariants[textColor]}>
+        <div className={`${textColorVariants[textColor]} ${imageOverflowVariants.imageOverflow === "true" ? '' : 'ml-3'}`}>
           {badgeProps && (
             <Badge text={badgeProps?.text} textColor={badgeProps?.textColor} bgColor={badgeProps?.bgColor} />
           )}
@@ -77,14 +95,16 @@ export default function TwoColCtaWithImage({ image, accentImage, altText, title,
           )}
         </div>
       </div>
-      {imageSide === "right" && (
-        <Image
-          src={image}
-          alt={altText}
-          width={598} height={709}
-          className="rounded-2xl z-10"
-        />
-      )}
-    </div>
+      {
+        imageSide === "right" && (
+          <Image
+            src={image}
+            alt={altText}
+            width={598} height={709}
+            className="rounded-2xl z-10"
+          />
+        )
+      }
+    </div >
   )
 }

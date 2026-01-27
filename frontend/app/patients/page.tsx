@@ -24,8 +24,8 @@ const twoColCtaWithImage = {
   title: "Stop Chasing Short-Term Relief",
   textColor: "brand-blue",
   imageOverflow: false,
-  blurb: "NPI isn't only transforming the lives of patients; reshaping the future of practitioners. Instead of memorizing protocols that crumble in real-world practice, clinicians learn a mastery-level skill that elevates their confidence, strengthens their reputation, and grows their practice through undeniable patient success.",
-  accentImage: "/two-col-cta-accent.png",
+  blurb: "If relief only Lasts until your next appointment, something deeper is being missed. We are here to change that. Our approach restores the pathways that allow the body to heal itself, breaking the cycle of temporary fixes. NPI isn't designed to keep people in treatment forever; it's designed to help them get their life back.",
+  accentImageRight: "/accent-right-fpo.png",
   cta: [
     {
       href: "/",
@@ -55,7 +55,7 @@ export default function Patients() {
         badgeText={twoColCtaWithImage.badgeProps.text}
         title={twoColCtaWithImage.title}
         blurb={twoColCtaWithImage.blurb}
-        accentImage={twoColCtaWithImage.accentImage}
+        accentImageRight={twoColCtaWithImage.accentImageRight}
         ctaProps={twoColCtaWithImage.cta[0]}
         badgeProps={twoColCtaWithImage.badgeProps}
       />

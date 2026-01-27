@@ -31,9 +31,11 @@ const twoColCtaWithImage = {
   image: "/fpo-two-col-cta.jpg",
   altText: "Two Col CTA With Image",
   badgeText: "For Practitioners",
+  cardBackgroundColor: "brand-dark-teal",
   title: "The Future of Clinical Practice",
+  imageOverflow: true,
   blurb: "NPI isn't only transforming the lives of patients; reshaping the future of practitioners. Instead of memorizing protocols that crumble in real-world practice, clinicians learn a mastery-level skill that elevates their confidence, strengthens their reputation, and grows their practice through undeniable patient success.",
-  accentImage: "/two-col-cta-accent.png",
+  accentImageLeft: "/two-col-cta-accent.png",
   cta: [
     {
       href: "/",
@@ -65,12 +67,14 @@ export default function About() {
       />
       <TwoColCtaWithImage
         image={twoColCtaWithImage.image}
+        cardBackgroundColor={twoColCtaWithImage.cardBackgroundColor}
         imageSide="right"
+        imageOverflow={twoColCtaWithImage.imageOverflow}
         altText={twoColCtaWithImage.altText}
         badgeText={twoColCtaWithImage.badgeText}
         title={twoColCtaWithImage.title}
         blurb={twoColCtaWithImage.blurb}
-        accentImage={twoColCtaWithImage.accentImage}
+        accentImageLeft={twoColCtaWithImage.accentImageLeft}
         ctaProps={twoColCtaWithImage.cta[0]}
         badgeProps={twoColCtaWithImage.badgeProps}
       />

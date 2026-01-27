@@ -13,7 +13,7 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ title, subtitle, cta, image, bgImage, altText }: HeroBannerProps) {
   return (
-    <div className="flex items-center justify-between h-[630px] bg-brand-blue text-white pl-20 overflow-hidden relative mt-20">
+    <div className="flex items-center justify-between h-[630px] bg-brand-blue text-white pl-20 overflow-hidden relative mt-20 z-20">
       <div className="flex flex-col gap-8 w-[45%] mb-20">
         <h1 className="text-6xl text-white leading-snug">{title}</h1>
         <h2 className="text-2xl font-satoshi text-white leading-snug font-normal">{subtitle}</h2>
