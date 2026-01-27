@@ -27,6 +27,27 @@ const heroBanner = {
   altText: "Hero Banner Image",
 }
 
+const twoColCtaWithImage = {
+  image: "/fpo-two-col-cta.jpg",
+  altText: "Two Col CTA With Image",
+  badgeText: "For Practitioners",
+  title: "The Future of Clinical Practice",
+  blurb: "NPI isn't only transforming the lives of patients; reshaping the future of practitioners. Instead of memorizing protocols that crumble in real-world practice, clinicians learn a mastery-level skill that elevates their confidence, strengthens their reputation, and grows their practice through undeniable patient success.",
+  accentImage: "/two-col-cta-accent.png",
+  cta: [
+    {
+      href: "/",
+      buttonText: "Start Your NPI Journey",
+      buttonColor: "brand-yellow"
+    },
+  ],
+  badgeProps: {
+    text: "For Practitioners",
+    textColor: "white",
+    bgColor: "transparent",
+  },
+}
+
 const FullWidthVideoBlurb = `Developed at Utah's Neural Pathway Institute by Dr. Eric Rawlin, our innovative method is built on one simple truth: every function in the body begins with communication from the brain. When that communication breaks down, so does your health. \n\n That's why NPI uses a non-invasive neurological technique to restore the pathways that control movement, sensation, healing, and overall function, helping people of every age find relieve, resolve unexplained symptoms, and finally feel like themselves again.`
 
 export default function About() {
@@ -42,7 +63,17 @@ export default function About() {
         videoAltText="Full Width Video"
         blurb={FullWidthVideoBlurb}
       />
-      <TwoColCtaWithImage />
+      <TwoColCtaWithImage
+        image={twoColCtaWithImage.image}
+        imageSide="right"
+        altText={twoColCtaWithImage.altText}
+        badgeText={twoColCtaWithImage.badgeText}
+        title={twoColCtaWithImage.title}
+        blurb={twoColCtaWithImage.blurb}
+        accentImage={twoColCtaWithImage.accentImage}
+        ctaProps={twoColCtaWithImage.cta[0]}
+        badgeProps={twoColCtaWithImage.badgeProps}
+      />
       <ThreeColCards />
       <TwoColCardsWithCta />
       <CardGrid />

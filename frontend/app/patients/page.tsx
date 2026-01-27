@@ -20,18 +20,24 @@ const heroBanner = {
 const twoColCtaWithImage = {
   image: "/fpo-two-col-cta.jpg",
   altText: "Two Col CTA With Image",
-  badgeText: "For Practitioners",
-  title: "The Future of Clinical Practice",
+  cardBackgroundColor: "brand-beige",
+  title: "Stop Chasing Short-Term Relief",
+  textColor: "brand-blue",
+  imageOverflow: false,
   blurb: "NPI isn't only transforming the lives of patients; reshaping the future of practitioners. Instead of memorizing protocols that crumble in real-world practice, clinicians learn a mastery-level skill that elevates their confidence, strengthens their reputation, and grows their practice through undeniable patient success.",
   accentImage: "/two-col-cta-accent.png",
   cta: [
     {
       href: "/",
-      buttonText: "Start Your Journey",
-      newTab: false,
-      buttonColor: "brand-yellow"
+      buttonText: "Talk to a Specialist",
+      buttonColor: "brand-teal"
     },
   ],
+  badgeProps: {
+    text: "Break the Cycle",
+    textColor: "dark-blue",
+    bgColor: "transparent",
+  },
 }
 
 
@@ -42,12 +48,16 @@ export default function Patients() {
       <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} bgImage={heroBanner.bgImage} altText={heroBanner.altText} />
       <TwoColCtaWithImage
         image={twoColCtaWithImage.image}
-        imageSide="right"
+        cardBackgroundColor={twoColCtaWithImage.cardBackgroundColor}
+        imageSide="left"
+        textColor={twoColCtaWithImage.textColor}
         altText={twoColCtaWithImage.altText}
-        badgeText={twoColCtaWithImage.badgeText}
+        badgeText={twoColCtaWithImage.badgeProps.text}
         title={twoColCtaWithImage.title}
         blurb={twoColCtaWithImage.blurb}
         accentImage={twoColCtaWithImage.accentImage}
+        ctaProps={twoColCtaWithImage.cta[0]}
+        badgeProps={twoColCtaWithImage.badgeProps}
       />
     </>
   )
