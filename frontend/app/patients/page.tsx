@@ -1,5 +1,7 @@
 import AccordionCardsCta from "../components/AccordionCardsCta";
+import FullWidthVideo from "../components/FullWidthVideo";
 import HeroBanner from "../components/HeroBanner";
+import ThreeColSliderWithCta from "../components/ThreeColSliderWithCta";
 import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
 import HandsOnHeartIcon from "../components/icons/hands-on-heart-icon";
 
@@ -147,6 +149,15 @@ export default function Patients() {
         badgeProps={twoColCtaWithImageTwo.badgeProps}
       />
       <AccordionCardsCta cards={accordionCards} />
+      <FullWidthVideo
+        badgeText="Patient Results"
+        badgeTextColor="dark-blue"
+        badgeBgColor="transparent"
+        title="Proof that Healing is Possible"
+        videoImage="/fpo-video-1.jpg"
+        videoAltText="Full Width Video"
+      />
+      <ThreeColSliderWithCta />
     </>
   )
 }
