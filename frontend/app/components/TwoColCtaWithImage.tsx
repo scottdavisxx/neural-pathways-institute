@@ -43,6 +43,7 @@ export default function TwoColCtaWithImage({
     "light-gray": "bg-light-gray",
     "brand-beige": "bg-brand-beige",
     "brand-teal": "bg-brand-teal",
+    "brand-dark-beige": "bg-brand-dark-beige",
   };
 
   const textColorVariants: Record<string, string> = {

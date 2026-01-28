@@ -20,12 +20,34 @@ const heroBanner = {
 const twoColCtaWithImage = {
   image: "/fpo-two-col-cta.jpg",
   altText: "Two Col CTA With Image",
-  cardBackgroundColor: "brand-beige",
+  cardBackgroundColor: "brand-dark-beige",
   title: "Stop Chasing Short-Term Relief",
   textColor: "brand-blue",
   imageOverflow: false,
   blurb: "If relief only Lasts until your next appointment, something deeper is being missed. We are here to change that. Our approach restores the pathways that allow the body to heal itself, breaking the cycle of temporary fixes. NPI isn't designed to keep people in treatment forever; it's designed to help them get their life back.",
   accentImageRight: "/accent-right-fpo.png",
+  cta: [
+    {
+      href: "/",
+      buttonText: "Talk to a Specialist",
+      buttonColor: "brand-teal"
+    },
+  ],
+  badgeProps: {
+    text: "Break the Cycle",
+    textColor: "dark-blue",
+    bgColor: "transparent",
+  },
+}
+const twoColCtaWithImageTwo = {
+  image: "/fpo-two-col-cta.jpg",
+  altText: "Two Col CTA With Image",
+  cardBackgroundColor: "brand-dark-beige",
+  title: "Stop Chasing Short-Term Relief",
+  imageSide: "right",
+  textColor: "brand-blue",
+  imageOverflow: false,
+  blurb: "If relief only Lasts until your next appointment, something deeper is being missed. We are here to change that. Our approach restores the pathways that allow the body to heal itself, breaking the cycle of temporary fixes. NPI isn't designed to keep people in treatment forever; it's designed to help them get their life back.",
   cta: [
     {
       href: "/",
@@ -58,6 +80,18 @@ export default function Patients() {
         accentImageRight={twoColCtaWithImage.accentImageRight}
         ctaProps={twoColCtaWithImage.cta[0]}
         badgeProps={twoColCtaWithImage.badgeProps}
+      />
+      <TwoColCtaWithImage
+        image={twoColCtaWithImageTwo.image}
+        cardBackgroundColor={twoColCtaWithImageTwo.cardBackgroundColor}
+        imageSide={twoColCtaWithImageTwo.imageSide}
+        textColor={twoColCtaWithImageTwo.textColor}
+        altText={twoColCtaWithImageTwo.altText}
+        badgeText={twoColCtaWithImageTwo.badgeProps.text}
+        title={twoColCtaWithImageTwo.title}
+        blurb={twoColCtaWithImageTwo.blurb}
+        ctaProps={twoColCtaWithImageTwo.cta[0]}
+        badgeProps={twoColCtaWithImageTwo.badgeProps}
       />
     </>
   )
