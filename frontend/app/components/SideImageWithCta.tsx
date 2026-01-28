@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Cta from "./Cta";
-import Badge from "./Badge";
+import Cta from "./ui/Cta";
+import Badge from "./ui/Badge";
 
 interface SideImageWithCtaProps {
   image: string;

@@ -1,4 +1,4 @@
-import Badge from "./Badge";
+import Badge from "./ui/Badge";
 import HandOnHeartIcon from "./icons/hand-on-heart-icon";
 import HealingIcon from "./icons/healing-icon";
 import MagnifyingGlassIcon from "./icons/magnifying-glass-icon";

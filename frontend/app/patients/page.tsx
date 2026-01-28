@@ -1,5 +1,7 @@
+import AccordionCardsCta from "../components/AccordionCardsCta";
 import HeroBanner from "../components/HeroBanner";
 import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
+import HandsOnHeartIcon from "../components/icons/hands-on-heart-icon";
 
 const heroBanner = {
   title: "The Breakthrough You've Been Looking For",
@@ -22,6 +24,7 @@ const twoColCtaWithImage = {
   altText: "Two Col CTA With Image",
   cardBackgroundColor: "brand-dark-beige",
   title: "Stop Chasing Short-Term Relief",
+  imageSide: "left" as const,
   textColor: "brand-blue",
   imageOverflow: false,
   blurb: "If relief only Lasts until your next appointment, something deeper is being missed. We are here to change that. Our approach restores the pathways that allow the body to heal itself, breaking the cycle of temporary fixes. NPI isn't designed to keep people in treatment forever; it's designed to help them get their life back.",
@@ -44,7 +47,7 @@ const twoColCtaWithImageTwo = {
   altText: "Two Col CTA With Image",
   cardBackgroundColor: "brand-dark-beige",
   title: "Stop Chasing Short-Term Relief",
-  imageSide: "right",
+  imageSide: "right" as const,
   textColor: "brand-blue",
   imageOverflow: false,
   blurb: "If relief only Lasts until your next appointment, something deeper is being missed. We are here to change that. Our approach restores the pathways that allow the body to heal itself, breaking the cycle of temporary fixes. NPI isn't designed to keep people in treatment forever; it's designed to help them get their life back.",
@@ -62,6 +65,56 @@ const twoColCtaWithImageTwo = {
   },
 }
 
+const accordionCards = [
+  {
+    icon: <HandsOnHeartIcon />,
+    title: "Physical Impairment",
+    blurb: `Chronic pain, limited mobility, weakness, 
+    and recurring injuries often come from disrupted 
+    neurological signals, not from the muscles alone. 
+    NPI clears and restores the pathways that tell your 
+    muscles how to activate, stabilize, and move. Once 
+    those pathways are restored, the body regains strength, 
+    stability, and function; often faster and more completely 
+    than people expected.`,
+  },
+  {
+    icon: <HandsOnHeartIcon />,
+    title: "Cognitive Decline",
+    blurb: `Chronic pain, limited mobility, weakness, 
+    and recurring injuries often come from disrupted 
+    neurological signals, not from the muscles alone. 
+    NPI clears and restores the pathways that tell your 
+    muscles how to activate, stabilize, and move. Once 
+    those pathways are restored, the body regains strength, 
+    stability, and function; often faster and more completely 
+    than people expected.`,
+  },
+  {
+    icon: <HandsOnHeartIcon />,
+    title: "Emotional Stability",
+    blurb: `Chronic pain, limited mobility, weakness, 
+    and recurring injuries often come from disrupted 
+    neurological signals, not from the muscles alone. 
+    NPI clears and restores the pathways that tell your 
+    muscles how to activate, stabilize, and move. Once 
+    those pathways are restored, the body regains strength, 
+    stability, and function; often faster and more completely 
+    than people expected.`,
+  },
+  {
+    icon: <HandsOnHeartIcon />,
+    title: "Overall Well-being",
+    blurb: `Chronic pain, limited mobility, weakness, 
+    and recurring injuries often come from disrupted 
+    neurological signals, not from the muscles alone. 
+    NPI clears and restores the pathways that tell your 
+    muscles how to activate, stabilize, and move. Once 
+    those pathways are restored, the body regains strength, 
+    stability, and function; often faster and more completely 
+    than people expected.`,
+  },
+]
 
 
 export default function Patients() {
@@ -71,7 +124,7 @@ export default function Patients() {
       <TwoColCtaWithImage
         image={twoColCtaWithImage.image}
         cardBackgroundColor={twoColCtaWithImage.cardBackgroundColor}
-        imageSide="left"
+        imageSide={twoColCtaWithImage.imageSide}
         textColor={twoColCtaWithImage.textColor}
         altText={twoColCtaWithImage.altText}
         badgeText={twoColCtaWithImage.badgeProps.text}
@@ -93,6 +146,7 @@ export default function Patients() {
         ctaProps={twoColCtaWithImageTwo.cta[0]}
         badgeProps={twoColCtaWithImageTwo.badgeProps}
       />
+      <AccordionCardsCta cards={accordionCards} />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Badge from "./Badge";
-import Cta from "./Cta";
+import Badge from "./ui/Badge";
+import Cta from "./ui/Cta";
 
 export default function TwoCtasWithIntro() {
   return (

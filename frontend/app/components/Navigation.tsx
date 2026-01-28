@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Cta from "./Cta";
+import Cta from "./ui/Cta";
 
 export default function Navigation() {
   return (

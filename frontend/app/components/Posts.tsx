@@ -1,19 +1,19 @@
 import Link from 'next/link'
 
-import {sanityFetch} from '@/sanity/lib/live'
-import {morePostsQuery, allPostsQuery} from '@/sanity/lib/queries'
-import {AllPostsQueryResult} from '@/sanity.types'
+import { sanityFetch } from '@/sanity/lib/live'
+import { morePostsQuery, allPostsQuery } from '@/sanity/lib/queries'
+import { AllPostsQueryResult } from '@/sanity.types'
 import DateComponent from '@/app/components/Date'
 import OnBoarding from '@/app/components/Onboarding'
-import Avatar from '@/app/components/Avatar'
-import {dataAttr} from '@/sanity/lib/utils'
+import Avatar from '@/app/components/ui/Avatar'
+import { dataAttr } from '@/sanity/lib/utils'
 
-const Post = ({post}: {post: AllPostsQueryResult[number]}) => {
-  const {_id, title, slug, excerpt, date, author} = post
+const Post = ({ post }: { post: AllPostsQueryResult[number] }) => {
+  const { _id, title, slug, excerpt, date, author } = post
 
   return (
     <article
-      data-sanity={dataAttr({id: _id, type: 'post', path: 'title'}).toString()}
+      data-sanity={dataAttr({ id: _id, type: 'post', path: 'title' }).toString()}
       key={_id}
       className="border border-gray-200 rounded-sm p-6 bg-gray-50 flex flex-col justify-between transition-colors hover:bg-white relative"
     >
@@ -55,10 +55,10 @@ const Posts = ({
   </div>
 )
 
-export const MorePosts = async ({skip, limit}: {skip: string; limit: number}) => {
-  const {data} = await sanityFetch({
+export const MorePosts = async ({ skip, limit }: { skip: string; limit: number }) => {
+  const { data } = await sanityFetch({
     query: morePostsQuery,
-    params: {skip, limit},
+    params: { skip, limit },
   })
 
   if (!data || data.length === 0) {
@@ -75,7 +75,7 @@ export const MorePosts = async ({skip, limit}: {skip: string; limit: number}) =>
 }
 
 export const AllPosts = async () => {
-  const {data} = await sanityFetch({query: allPostsQuery})
+  const { data } = await sanityFetch({ query: allPostsQuery })
 
   if (!data || data.length === 0) {
     return <OnBoarding />

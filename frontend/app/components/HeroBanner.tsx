@@ -1,6 +1,6 @@
-import { CtaProps } from "./Cta";
+import { CtaProps } from "./ui/Cta";
 import Image from "next/image";
-import Cta from "./Cta";
+import Cta from "./ui/Cta";
 
 interface HeroBannerProps {
   title: string;

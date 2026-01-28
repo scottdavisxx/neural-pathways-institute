@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Cta from "./Cta";
+import Cta from "./ui/Cta";
 
 export default function TwoColCardsWithCta() {
   return (

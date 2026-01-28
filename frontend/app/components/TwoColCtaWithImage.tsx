@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Badge from "./Badge";
-import Cta from "./Cta";
-import { BadgeProps } from "./Badge";
-import { CtaProps } from "./Cta";
+import Badge from "./ui/Badge";
+import Cta from "./ui/Cta";
+import { BadgeProps } from "./ui/Badge";
+import { CtaProps } from "./ui/Cta";
 
 interface TwoColCtaWithImageProps {
   image: string;
