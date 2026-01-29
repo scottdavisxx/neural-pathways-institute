@@ -122,7 +122,7 @@ const accordionCards = [
 export default function Patients() {
   return (
     <>
-      <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} bgImage={heroBanner.bgImage} altText={heroBanner.altText} />
+      <HeroBanner {...heroBanner} />
       <TwoColCtaWithImage
         image={twoColCtaWithImage.image}
         cardBackgroundColor={twoColCtaWithImage.cardBackgroundColor}

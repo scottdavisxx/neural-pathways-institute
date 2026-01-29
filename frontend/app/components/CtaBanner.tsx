@@ -4,7 +4,7 @@ import Cta from "./ui/Cta";
 
 export default function CtaBanner() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center px-28 py-16 bg-brand-beige text-brand-blue relative">
+    <div className="flex flex-col gap-8 items-center justify-center px-28 py-24 bg-brand-beige text-brand-blue relative">
       <Image src="/fpo-cta-banner-accent.png" alt="Accent" width={250} height={1000} className="absolute left-0 z-10" />
       <div className="flex flex-col gap-8 items-center text-center bg-brand-dark-beige rounded-2xl py-16 px-28">
         <Badge text="For Practitioners" textColor="dark-blue" bgColor="transparent" />

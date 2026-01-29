@@ -55,7 +55,7 @@ const FullWidthVideoBlurb = `Developed at Utah's Neural Pathway Institute by Dr.
 export default function About() {
   return (
     <>
-      <HeroBanner title={heroBanner.title} subtitle={heroBanner.subtitle} cta={heroBanner.cta} image={heroBanner.image} bgImage={heroBanner.bgImage} altText={heroBanner.altText} />
+      <HeroBanner {...heroBanner} />
       <FullWidthVideo
         badgeText="About NPI"
         badgeTextColor="dark-blue"
