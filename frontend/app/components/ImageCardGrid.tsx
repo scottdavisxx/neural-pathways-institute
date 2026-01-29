@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Badge from "./ui/Badge";
 
-export default function CardGrid() {
+export default function ImageCardGrid() {
   return (
     <div className="flex flex-col gap-8 items-center justify-center px-24 py-16 bg-light-gray text-brand-blue">
       <Badge text="Why NPI is Different" textColor="dark-blue" bgColor="transparent" />
