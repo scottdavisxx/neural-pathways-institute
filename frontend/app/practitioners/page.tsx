@@ -66,11 +66,53 @@ const twoColCtaWithImageTwo = {
   },
 }
 
+const ctaBanner = {
+  accentImage: "/fpo-cta-banner-accent.png",
+  badge: {
+    text: "For Practitioners",
+    textColor: "dark-blue",
+    bgColor: "transparent",
+  },
+  title: "Is NPI Right for Your Practice?",
+  textColor: "brand-blue",
+  bgColor: "brand-dark-beige",
+  blurb: `Test
+  test
+  test`,
+  cta:
+  {
+    href: "/",
+    buttonText: "Get NPI Certified",
+    buttonColor: "brand-teal"
+  },
+
+}
+const ctaBannerTwo = {
+  badge: {
+    text: "For Practitioners",
+    textColor: "brand-blue",
+    bgColor: "transparent",
+  },
+  title: "Set Yourself Apart in a Crowded Market",
+  bgColor: "brand-blue",
+  textColor: "white",
+  blurb: `Test
+  test
+  test`,
+  cta:
+  {
+    href: "/",
+    buttonText: "Get NPI Certified",
+    buttonColor: "brand-yellow"
+  },
+
+}
+
 export default function Practitioners() {
   return (
     <>
       <HeroBanner {...heroBanner} />
-      <CtaBanner />
+      <CtaBanner {...ctaBanner} />
       <IconCardGrid />
       <NumberCardGrid />
       <TwoColCtaWithImage
@@ -100,6 +142,7 @@ export default function Practitioners() {
         badgeProps={twoColCtaWithImageTwo.badgeProps}
       />
       <ThreeColCardsWithImage />
+      <CtaBanner {...ctaBannerTwo} />
     </>
   )
 }

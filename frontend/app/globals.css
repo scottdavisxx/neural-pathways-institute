@@ -40,3 +40,7 @@
   --color-seafoam: #B2E4DE;
   --color-seafoam-light: #DDEAE2;
 }
+
+p {
+  font-size: 20px;
+}
