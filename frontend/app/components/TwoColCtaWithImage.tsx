@@ -44,6 +44,7 @@ export default function TwoColCtaWithImage({
     "brand-beige": "bg-brand-beige",
     "brand-teal": "bg-brand-teal",
     "brand-dark-beige": "bg-brand-dark-beige",
+    "sky-blue-20": "bg-sky-blue-20",
   };
 
   const textColorVariants: Record<string, string> = {
@@ -63,11 +64,6 @@ export default function TwoColCtaWithImage({
     "right": "rounded-l-2xl",
   };
 
-  const imageOverflowVariants: Record<string, string> = {
-    true: "h-[650px]",
-    false: "h-[709px] -ml-3",
-  };
-
   return (
     <div className={`flex items-center px-16 py-16 relative bg-light-gray`}>
       {accentImageLeft && (
@@ -84,8 +80,14 @@ export default function TwoColCtaWithImage({
           className="rounded-2xl z-10"
         />
       )}
-      <div className={`flex flex-col gap-8 items-center justify-center px-16 py-20 relative ${imageOverflowVariants[imageOverflow.toString()]} ${imageSideBorders[imageSide]} ${cardBackgroundColorVariants[cardBackgroundColor]}`}>
-        <div className={`${textColorVariants[textColor]} ${imageOverflowVariants.imageOverflow === "true" ? '' : 'ml-3'}`}>
+      <div className={`flex flex-col gap-8 items-center justify-center px-16 py-20 relative 
+        ${imageOverflow ? 'h-[650px]' : 'h-[709px]'} 
+        ${imageSideBorders[imageSide]} 
+        ${cardBackgroundColorVariants[cardBackgroundColor]} 
+        ${imageOverflow === false && imageSide === "left" && '-ml-3'} 
+        ${imageOverflow === false && imageSide === "right" && '-mr-3'}`
+      }>
+        <div className={`${textColorVariants[textColor]} `}>
           {badgeProps && (
             <Badge text={badgeProps?.text} textColor={badgeProps?.textColor} bgColor={badgeProps?.bgColor} />
           )}
