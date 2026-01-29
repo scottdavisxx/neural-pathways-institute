@@ -2,6 +2,7 @@ import CtaBanner from "../components/CtaBanner";
 import HeroBanner from "../components/HeroBanner";
 import IconCardGrid from "../components/IconCardGrid";
 import NumberCardGrid from "../components/NumberCardGrid";
+import ThreeColCardsWithImage from "../components/ThreeColCardsWithImage";
 import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
 
 const heroBanner = {
@@ -98,6 +99,7 @@ export default function Practitioners() {
         ctaProps={twoColCtaWithImageTwo.cta[0]}
         badgeProps={twoColCtaWithImageTwo.badgeProps}
       />
+      <ThreeColCardsWithImage />
     </>
   )
 }
