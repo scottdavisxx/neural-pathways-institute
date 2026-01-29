@@ -1,5 +1,6 @@
 import CtaBanner from "../components/CtaBanner";
 import HeroBanner from "../components/HeroBanner";
+import IconCardGrid from "../components/IconCardGrid";
 
 const heroBanner = {
   title: "The Breakthrough You've Been Looking For",
@@ -22,6 +23,7 @@ export default function Practitioners() {
     <>
       <HeroBanner {...heroBanner} />
       <CtaBanner />
+      <IconCardGrid />
     </>
   )
 }
