@@ -33,7 +33,7 @@ export default function Cta({ href, buttonText = "Learn More", newTab, buttonCol
   const textClass = textColorVariants[textColor] || "text-brand-blue";
 
   return (
-    <Link target={newTab ? "_blank" : "_self"} href={href} className={`${textClass} text-xl text-center px-4 py-2 rounded-lg uppercase w-1/2 ${fill ? "w-1/2" : "w-fit px-6"} ${bgClass}`}>
+    <Link rel={newTab ? "noopener noreferrer" : undefined} target={newTab ? "_blank" : "_self"} href={href} className={`${textClass} text-xl text-center px-4 py-2 rounded-lg uppercase w-1/2 ${fill ? "w-1/2" : "w-fit px-6"} ${bgClass}`}>
       {buttonText}
     </Link>
   );
