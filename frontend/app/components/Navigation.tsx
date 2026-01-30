@@ -14,7 +14,7 @@ export default function Navigation() {
         <Link href="/about">About</Link>
         <Link href="/patients">Patients</Link>
         <Link href="/practitioners">Practitioners</Link>
-        <Cta href="/" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
+        <Cta href="/contact" buttonText="Contact Us" newTab={false} buttonColor="brand-yellow" />
       </div>
     </nav>
   );
