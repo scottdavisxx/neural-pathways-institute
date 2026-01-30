@@ -76,9 +76,9 @@ const ctaBanner = {
   title: "Is NPI Right for Your Practice?",
   textColor: "brand-blue",
   bgColor: "brand-dark-beige",
-  blurb: `Test
-  test
-  test`,
+  blurb: `If you've ever felt boxed in by protocols Unsure why certain patients don't respond, or frustrated by approaches that work inconsistently, you're not alone. Many practitioners come to NPI not because they lack skill, but because they want a deeper understanding.
+  
+  Neural pathway integration is designed for clinician to value clarity over complexity, principles over protocols, and results of repetition. If you're looking for a system that strengthen your decision-making and elevate your outcomes, NPI was built for you.`,
   cta:
   {
     href: "/",
@@ -89,20 +89,18 @@ const ctaBanner = {
 }
 const ctaBannerTwo = {
   badge: {
-    text: "For Practitioners",
-    textColor: "brand-blue",
+    text: "Start your journey",
+    textColor: "white",
     bgColor: "transparent",
   },
   title: "Set Yourself Apart in a Crowded Market",
   bgColor: "brand-blue",
   textColor: "white",
-  blurb: `Test
-  test
-  test`,
+  blurb: `if you're ready to deepen your understanding, elevate your outcomes, and practice with greater confidence, the next step is simple`,
   cta:
   {
     href: "/",
-    buttonText: "Get NPI Certified",
+    buttonText: "Talk with the NPI Team",
     buttonColor: "brand-yellow"
   },
 

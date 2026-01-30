@@ -40,7 +40,7 @@ export default function CtaBanner({ badge, title, textColor = "brand-blue", blur
       {accentImage && (
         <Image src={accentImage} alt="Accent" width={250} height={1000} className="absolute left-0 z-10" />
       )}
-      <div className={`flex flex-col gap-8 items-center text-center rounded-2xl py-16 px-28 ${bgColorVariants[bgColor]}`}>
+      <div className={`flex flex-col gap-8 items-center text-center rounded-2xl py-16 ${bgColorVariants[bgColor]}`}>
         {badge && (
           <Badge text={badge.text} textColor={badge.textColor} bgColor={badge.bgColor} />
         )}
