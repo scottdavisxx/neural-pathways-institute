@@ -1,9 +1,9 @@
-import ImageCardGrid from "../components/ImageCardGrid";
-import FullWidthVideo from "../components/FullWidthVideo";
-import HeroBanner from "../components/HeroBanner";
-import ThreeColCards from "../components/ThreeColCards";
-import TwoColCardsWithCta from "../components/TwoColCardsWithCta";
-import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
+import ImageCardGrid from "../../components/ImageCardGrid";
+import FullWidthVideo from "../../components/FullWidthVideo";
+import HeroBanner from "../../components/HeroBanner";
+import ThreeColCards from "../../components/ThreeColCards";
+import TwoColCardsWithCta from "../../components/TwoColCardsWithCta";
+import TwoColCtaWithImage from "../../components/TwoColCtaWithImage";
 
 const heroBanner = {
   title: "Rooted in Neurology. Proven Through Outcomes.",

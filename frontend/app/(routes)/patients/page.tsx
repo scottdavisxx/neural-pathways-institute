@@ -1,9 +1,9 @@
-import AccordionCardsCta from "../components/AccordionCardsCta";
-import FullWidthVideo from "../components/FullWidthVideo";
-import HeroBanner from "../components/HeroBanner";
-import ThreeColSliderWithCta from "../components/ThreeColSliderWithCta";
-import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
-import HandsOnHeartIcon from "../components/icons/hands-on-heart-icon";
+import AccordionCardsCta from "../../components/AccordionCardsCta";
+import FullWidthVideo from "../../components/FullWidthVideo";
+import HeroBanner from "../../components/HeroBanner";
+import ThreeColSliderWithCta from "../../components/ThreeColSliderWithCta";
+import TwoColCtaWithImage from "../../components/TwoColCtaWithImage";
+import HandsOnHeartIcon from "../../components/icons/hands-on-heart-icon";
 
 const heroBanner = {
   title: "The Breakthrough You've Been Looking For",

@@ -1,9 +1,9 @@
-import CtaBanner from "../components/CtaBanner";
-import HeroBanner from "../components/HeroBanner";
-import IconCardGrid from "../components/IconCardGrid";
-import NumberCardGrid from "../components/NumberCardGrid";
-import ThreeColCardsWithImage from "../components/ThreeColCardsWithImage";
-import TwoColCtaWithImage from "../components/TwoColCtaWithImage";
+import CtaBanner from "../../components/CtaBanner";
+import HeroBanner from "../../components/HeroBanner";
+import IconCardGrid from "../../components/IconCardGrid";
+import NumberCardGrid from "../../components/NumberCardGrid";
+import ThreeColCardsWithImage from "../../components/ThreeColCardsWithImage";
+import TwoColCtaWithImage from "../../components/TwoColCtaWithImage";
 
 const heroBanner = {
   title: "The Breakthrough You've Been Looking For",
